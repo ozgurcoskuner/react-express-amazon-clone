@@ -30,7 +30,7 @@ const fetchProductsFailure = (err) => {
 const fetchProducts = () => {
     return dispatch => {
         dispatch(fetchProductsRequest())
-        fetch('http://localhost:5000/api/products')
+        fetch('/api/products')
         .then(res => res.json())
         .then(products => dispatch(fetchProductsSuccess(products)))
         .catch(err => dispatch(fetchProductsFailure(err)))
