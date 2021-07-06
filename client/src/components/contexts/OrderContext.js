@@ -27,7 +27,6 @@ export function OrderProvider({ children }) {
 
   function updateCartAfterFetch() {
     setUpdateCart((prev) => !prev);
-    console.log('aga noluyor aga')
   }
 
   function updateOrderInfoAfterLogout() {
