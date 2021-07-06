@@ -7,7 +7,7 @@ function SearchBar() {
   const filteredItems = [];
     
   var re = new RegExp(searchValue, "ig");
-  products.forEach((item) => {
+  products && products.forEach((item) => {
     if (item.type.search(re) !== -1) {
       filteredItems.push(item);
     }
