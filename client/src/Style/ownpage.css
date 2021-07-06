@@ -1,0 +1,245 @@
+.own-page {
+  display: flex;
+  position: relative;
+  z-index: 5;
+  margin: 1rem auto 4rem;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+}
+
+@keyframes modal-container-anim {
+  from{
+    top:0;
+    
+  }
+  to{
+    top:30%
+  }
+}
+
+.own-page .modal-container {
+  display: flex;
+  z-index: 6;
+  position: fixed;
+  top: 30%;
+  width: 18rem;
+  height: 12rem;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  background-color: rgba(252, 205, 88, 0.9); /* Black w/ opacity */
+  font-weight: 500;
+  animation-name: modal-container-anim;
+  animation-duration: 1s;
+}
+
+.own-page .modal-container img{
+  width: 10rem;
+  display: block;
+}
+
+.own-page .image-container {
+  background-color: white;
+  flex-basis: 40%;
+  height: 25rem;
+  -webkit-box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.29);
+}
+
+.own-page .image-container img{
+  margin: auto;
+  object-fit: contain;
+  width: 50%;
+  height: 90%;
+  display: block;
+
+}
+
+.own-page .info-container {
+  flex-basis: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.own-page .info-container li {
+  padding: 0.4rem 0.2rem;
+  font-size: 0.9rem;
+}
+
+.own-page .info-container .purchase-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.own-page .info-container .purchase-container span {
+  color: red;
+  font-size: 1.2rem;
+}
+
+@keyframes own-page-button-hover-anim {
+  from {
+    background-color: #fccd58;
+  }
+  to {
+    background-color: #fcc12e;
+    
+  }
+}
+.own-page .info-container .purchase-container button {
+  font-size: 1rem;
+  padding: 0.4rem 0.2rem;
+  width: 9rem;
+  border-radius: 0.8rem;
+  border: 1px solid black;
+  background-color: #fccd58;
+  cursor: pointer;
+}
+.own-page .info-container .purchase-container button:hover {
+  
+  animation-name: own-page-button-hover-anim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  
+}
+
+.own-page .info-container .purchase-container button:active {
+  background-color: #ffbd15;
+}
+.own-page .info-container .purchase-container button img {
+  padding: 0 0.3rem 0 0;
+  height: 1.4rem;
+  width: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  /*  phone */
+  .own-page .modal-container {
+
+    width: 12rem;
+    height: 6rem;
+
+    font-size: 0.8rem;
+
+  }
+
+  .own-page .modal-container img{
+    width: 5rem;
+    
+  }
+
+
+  .own-page .image-container {
+ 
+    height: 10rem;
+
+  }
+
+  .own-page .info-container h3 {
+    font-size: 0.8rem;
+  }
+  .own-page .info-container li {
+    padding: 0.2rem 0.05rem;
+    font-size: 0.5rem;
+  }
+
+  .own-page .info-container .purchase-container {
+    margin-top: 1rem;
+   
+  }
+  
+  .own-page .info-container .purchase-container span {
+    
+    font-size: 0.9rem;
+  }
+  
+
+  .own-page .info-container .purchase-container button {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.1rem;
+    width: 6rem;
+    
+ 
+  }
+
+  
+
+  .own-page .info-container .purchase-container button img {
+    padding: 0 0.1rem 0 0;
+    height: 0.7rem;
+   
+  }
+
+
+
+
+  }
+  
+  
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+  /*  tablet */
+  
+  .own-page .modal-container {
+    
+    width: 15rem;
+    height: 9rem;
+
+    font-size: 1.2rem;
+
+  }
+
+  .own-page .modal-container img{
+    width: 6rem;
+    
+  }
+
+  .own-page .image-container {
+ 
+    height: 15rem;
+
+  }
+  .own-page .info-container h3 {
+    font-size: 1rem;
+  }
+  .own-page .info-container li {
+    padding: 0.3rem 0.1rem;
+    font-size: 0.7rem;
+  }
+
+  .own-page .info-container .purchase-container {
+    margin-top: 1.2rem;
+   
+  }
+  
+  .own-page .info-container .purchase-container span {
+    
+    font-size: 1.1rem;
+  }
+  
+
+  .own-page .info-container .purchase-container button {
+    font-size: 1rem;
+    padding: 0.3rem 0.2rem;
+    width: 7rem;
+    
+ 
+  }
+
+  
+
+  .own-page .info-container .purchase-container button img {
+    padding: 0 0.2rem 0 0;
+    height: 0.9rem;
+   
+  }
+
+
+
+
+
+
+  }

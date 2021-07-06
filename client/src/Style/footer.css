@@ -1,0 +1,33 @@
+
+footer{
+ 
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    height: 7rem;
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+    background: rgb(149, 149, 226);
+    z-index: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    /*  phone */
+    footer{
+      height: 4rem ;
+      padding-top: 0.5rem;
+      font-size: 0.6rem;
+    }
+
+  }
+
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+      /*  tablet */
+      
+      footer{
+        height: 5rem;
+        padding-top: 1rem;
+        font-size: 0.8rem;
+      }
+      }

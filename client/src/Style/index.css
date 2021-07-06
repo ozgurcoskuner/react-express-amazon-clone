@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.bg-image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -15rem;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.loading {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
+.loading ~ footer {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+/*  phone */
+.bg-image{
+  margin-bottom: -5rem ;
+}
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+/*  tablet */
+
+.bg-image{
+  margin-bottom: -10rem ;
+}
+}

@@ -1,0 +1,351 @@
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  height: 4rem;
+  background: #131921;
+}
+
+header .logo-container {
+  flex-basis: 14%;
+  margin: 1rem 0 0 1rem;
+}
+header .logo-container img {
+  height: 3rem;
+
+  object-fit: contain;
+}
+
+.search-bar {
+  position: relative;
+  flex-basis: 50%;
+  display: flex;
+}
+
+.search-bar .search-input {
+  width: 100%;
+  font-size: 1rem;
+
+  border-radius: 4px;
+  border: 0;
+  padding: 0.5rem;
+}
+
+.search-bar .search-input:focus {
+  outline: 3px solid #fcac44;
+  border: 0;
+}
+
+.search-bar .search-input:focus + img {
+  outline: 3px solid #fcac44;
+}
+
+.search-bar .search-items {
+  z-index: 6;
+  position: absolute;
+  width: 90%;
+  background: white;
+  top: 2rem;
+}
+
+.search-bar .search-items li {
+  list-style: none;
+
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid black;
+}
+
+
+
+.search-bar .search-items li:last-child {
+  border-bottom: none;
+}
+
+.search-bar .search-items li a{
+ text-decoration: none;
+}
+.search-bar .search-items p {
+  display: flex;
+  height: 4.8rem;
+  font-size: 0.8rem;
+  color: black;
+  margin: 0.8rem 0.4rem;
+  
+}
+
+.search-bar .search-items img {
+  height: 4rem;
+  width: auto;
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.search-bar img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.header-user {
+  display: flex;
+  flex-basis: 10%;
+  height: 100%;
+  color: white;
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+.header-user .logout-hover {
+  display: none;
+}
+
+.header-user:hover .logout-hover {
+  display: block;
+
+  width: 130%;
+  height: 4rem;
+  position: absolute;
+  z-index: 5;
+  top: 3.5rem;
+  left: 0;
+  background: white;
+  
+
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.header-user:hover .logout-hover button {
+  background-color: #febd69;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.header-user:hover .logout-hover::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 20%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.header-user:hover .logout-hover:hover {
+  background: white;
+}
+header .header-user a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.header-cart {
+  display: flex;
+
+  flex-basis: 10%;
+  color: white;
+}
+
+.header-cart a {
+  display: flex;
+  flex-flow: row nowrap;
+  text-decoration: none;
+}
+.header-cart a img {
+ width: 25%;
+  margin-right: 0.2rem;
+  object-fit: contain;
+  position: relative;
+}
+
+.header-cart-info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.header-cart-info span {
+  padding: 0.2rem 0.5rem;
+
+  color: rgb(208, 211, 17);
+}
+
+
+.header-cart-info p {
+  font-size: 0.8rem;
+  color: white;
+
+  
+}
+
+
+/* Responsiveness */
+
+@media only screen and (max-width: 600px) {
+  /* For phone: */
+  header {
+    height: 2rem;
+    font-size: 0.4rem;
+  }
+
+   header .logo-container img {
+    height: 1.4rem;
+  
+    
+  }
+  .search-bar {
+    height: 50%;
+  }
+
+  .search-input::placeholder {
+    font-size: 0.4rem;
+  }
+
+ 
+  .search-bar .search-items p {
+    
+    height: 2rem;
+    font-size: 0.4rem;
+    color: black;
+    margin: 0.4rem 0.2rem;
+  }
+  
+  .search-bar .search-items img {
+    height: 2rem;
+
+  }
+  header .header-user a:link,
+  a:visited {
+  
+    font-size: 0.4rem;
+  }
+  .header-user:hover .logout-hover {
+    display: block;  
+    width: 130%;
+    height: 2rem;
+
+    top: 2rem;
+    left: 0;
+
+  }
+  
+  .header-user:hover .logout-hover button {
+
+
+    padding: 0.1rem 0.3rem;
+
+    width: 80%;
+    margin: 0.4rem auto;
+    font-size: 0.6rem;
+  }
+  
+  .header-user:hover .logout-hover::after {
+
+    margin-left: -5px;
+    border-width: 5px;
+
+  }
+  .header-cart-info span {
+    font-size: 0.6rem;
+  }
+
+  .header-cart-info p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  /*  tablet */
+  header {
+    height: 3rem;
+    font-size: 0.6rem;
+  }
+
+  header .logo-container img {
+    height: 2rem;
+  
+    
+  }
+
+  .search-bar {
+    height: 50%;
+  }
+
+  .search-input::placeholder {
+    font-size: 0.6rem;
+  }
+
+  .search-bar .search-items p {
+    
+    height: 3rem;
+    font-size: 0.5rem;
+    color: black;
+    margin: 0.5rem 0.3rem;
+  }
+  
+  .search-bar .search-items img {
+    height: 3rem;
+
+  }
+
+  header .header-user a:link,
+a:visited {
+
+  font-size: 0.8rem;
+}
+    
+  .header-user:hover .logout-hover {
+    display: block;  
+    width: 130%;
+    height: 2.2rem;
+
+    top: 2rem;
+    left: 0;
+
+  }
+  
+  .header-user:hover .logout-hover button {
+
+
+    padding: 0.1rem 0.3rem;
+
+    width: 80%;
+    margin: 0.4rem auto;
+    font-size: 0.8rem;
+  }
+  
+  .header-user:hover .logout-hover::after {
+
+    margin-left: -8px;
+    border-width: 8px;
+
+  }
+
+  .header-cart-info span {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.3rem;
+    
+  }
+
+  .header-cart-info p {
+    font-size: 0.6rem;
+    color: white;
+    
+  }
+
+
+}
+

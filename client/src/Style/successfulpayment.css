@@ -1,0 +1,27 @@
+.successfulpayment-container{
+    margin: auto;
+    display: block;
+    margin: 4rem auto;
+    width: 15rem;
+  }
+  
+  .successfulpayment-container img{
+    width: 10rem;
+    display: block;
+    margin: auto;
+  }
+  
+  .successfulpayment-container p{
+   font-size: 1.5rem;
+   text-align: center;
+   margin-top: 1rem;
+  }
+  
+  .successfulpayment-container .linkToMainMenu{
+    
+    color: blue;
+    display: block;
+    text-align: center;
+    margin-top: 1.2rem;
+   }
+

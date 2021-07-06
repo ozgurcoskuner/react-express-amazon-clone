@@ -1,0 +1,84 @@
+
+.signup-container ~ .products-container,.signup-container ~ .bg-image{
+  display: none;
+}
+
+
+.signup-container{
+    width: 24rem;
+    height: 40rem;
+    margin: 2rem auto;
+    background-color: white;
+   
+  }
+  
+  .signup-container img{
+    width: 45%;
+    display: block;
+    margin: auto;
+  }
+  
+  .signup-container p{
+    display: block;
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem;
+    
+  }
+  .signup-container form{
+    
+    
+    width: 90%;
+    border: 1px solid rgb(223, 223, 223);
+    margin: auto;
+    margin-top: 2rem;
+    
+  }
+
+  .signup-container .error-container{
+    background: rgb(250, 84, 84);
+    margin: 0.5rem auto;
+    width: 90%;
+    height: 2rem;
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+  .signup-container form label{
+    padding: 1rem;
+    font-weight: bold;
+    
+  }
+  .signup-container form input{
+    display: block;
+    width: 90%;
+    margin: 0.3rem 1rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.2rem;
+    border: 1px solid #949494;
+    
+  }
+  
+  .signup-container form input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
+   outline: 3px solid #e77600;
+   border: 0;
+    
+  }
+  
+  
+  .signup-container form input[type=submit]{
+    font-size: 0.9rem;
+    display: block;
+    background-color: #f2cd6e;
+    width: 90%;
+    padding: 0.6rem 0 ;
+    border: 2px solid #9c7e31;
+    cursor: pointer;
+  }
+  
+  .signup-container span{
+    color: rgb(69, 69, 248);
+    display: inline-block;
+    padding: 1rem;
+    font-size: 0.8rem;
+    
+  }

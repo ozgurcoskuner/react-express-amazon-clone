@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently -n 'client, server' \"npm run client\" \"nodemon server\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {"node": "14.15.5"},
+  "keywords": [],
+  "author": "Özgür Coşkuner",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.9.0",
+    "mongoose": "^5.12.12"
+  }
+}

@@ -1,0 +1,87 @@
+
+
+.signin-container {
+  width: 24rem;
+  height: 40rem;
+  margin: 2rem auto;
+  background-color: white;
+}
+.signin-container img {
+  position: relative;
+  z-index: 4;
+  width: 45%;
+  display: block;
+  margin: auto;
+}
+
+.signin-container form {
+  width: 90%;
+  border: 1px solid rgb(223, 223, 223);
+  margin: auto;
+  margin-top: 2rem;
+}
+.signin-container .error-container {
+  background: rgb(250, 84, 84);
+  margin: 0.5rem auto;
+  width: 90%;
+  height: 2rem;
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.signin-container form p {
+  display: block;
+  font-size: 2rem;
+  padding: 1rem 1rem 1rem;
+}
+
+.signin-container form label {
+  padding: 1rem;
+  font-weight: bold;
+}
+.signin-container form input {
+  display: block;
+  width: 90%;
+  margin: 0.3rem 1rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.2rem;
+  border: 1px solid #949494;
+}
+
+.signin-container form input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: 3px solid #e77600;
+  border: 0;
+}
+
+.signin-container form input[type="submit"] {
+  font-size: 0.9rem;
+  display: block;
+  background-color: #f2cd6e;
+  width: 90%;
+  padding: 0.4rem 0;
+  border: 2px solid #9c7e31;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+.signin-container .new-to-amazon {
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.signin-container button {
+  background-color: #eff0f3;
+  border: 1px solid #adb1b8;
+  display: block;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  width: 90%;
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+}
