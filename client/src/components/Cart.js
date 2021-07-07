@@ -55,10 +55,11 @@ function Cart() {
           {
             method: "delete",
           }
-        );
+        )
+        .then(() => updateCartAfterFetch())
       });
       
-      updateCartAfterFetch();
+      
       
     }
   };
@@ -72,10 +73,11 @@ function Cart() {
           {
             method: "delete",
           }
-        );
+        )
+        .then(() => updateCartAfterFetch())
       });
 
-      updateCartAfterFetch();
+      
     }
   }
 

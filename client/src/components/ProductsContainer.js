@@ -19,7 +19,7 @@ function ProductsContainer() {
       {loading ? (
         <h1 className="loading">Loading...</h1>
       ) : error ? (
-        <h2>{error}</h2>
+        <h2>{error.message}</h2>
       ) : (
         <div className="products-container">
           {products &&

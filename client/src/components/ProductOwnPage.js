@@ -59,11 +59,11 @@ function ProductOwnPage() {
             userId: currentUser.uid,
             idToken: idToken,
           }),
+        }).then(() => {
+          updateCartAfterFetch();
+          setTriggerModal((prev) => !prev);
         });
       });
-      updateCartAfterFetch();
-      setTriggerModal((prev) => !prev);
-      
     } else {
       return history.push("/signin");
     }
