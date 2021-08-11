@@ -14,7 +14,14 @@ export function OrderProvider({ children }) {
   useEffect(() => {
     if (currentUser) {
       currentUser.getIdToken(false).then((idToken) => {
-      fetch(`/api/orders/${currentUser.uid}/${idToken}`)
+        let bearer = 'Bearer ' + idToken
+      fetch(`/api/orders/${currentUser.uid}`,
+      {
+        headers: {
+          'Authorization': bearer,
+        },
+      }
+      )
         .then((res) => res.json(res))
         .then((data) => {
           setOrderInfo(data);
