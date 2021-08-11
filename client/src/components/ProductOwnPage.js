@@ -49,15 +49,16 @@ function ProductOwnPage() {
   const addToCart = () => {
     if (currentUser) {
       currentUser.getIdToken(false).then((idToken) => {
+        let bearer = 'bearer ' + idToken;
         fetch(`/api/orders`, {
           method: "post",
           headers: {
             "Content-Type": "application/json;charset=utf-8",
+            'Authorization': bearer,
           },
           body: JSON.stringify({
             productId: id,
             userId: currentUser.uid,
-            idToken: idToken,
           }),
         }).then(() => {
           updateCartAfterFetch();

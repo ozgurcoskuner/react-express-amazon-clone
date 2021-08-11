@@ -4,9 +4,9 @@ const Orders = require("../model/Orders");
 const Products = require("../model/Products");
 const admin = require("../firebase-admin/firebase-admin");
 
-router.get("/:userId/:idToken", async (req, res) => {
+router.get("/:userId", async (req, res) => {
   try {
-    const decodedToken = await admin.auth().verifyIdToken(req.params.idToken);
+    const decodedToken = await admin.auth().verifyIdToken(req.headers.authorization.split(" ")[1]);
     const uid = decodedToken.uid;
     if(uid === req.params.userId){
     const order = await Orders.find({ userId: req.params.userId });
@@ -23,9 +23,9 @@ router.get("/:userId/:idToken", async (req, res) => {
   }
 });
 
-router.delete("/:id/:userId/:idToken", async (req, res) => {
+router.delete("/:id/:userId", async (req, res) => {
   try{
-  const decodedToken = await admin.auth().verifyIdToken(req.params.idToken);
+  const decodedToken = await admin.auth().verifyIdToken(req.headers.authorization.split(" ")[1]);
   const uid = decodedToken.uid;
   if(uid === req.params.userId){
     try {
@@ -47,9 +47,9 @@ router.delete("/:id/:userId/:idToken", async (req, res) => {
 
 //delete all orders for spesific user
 //it is just a replica of succesfull payment of a order
-router.delete("/:userId/:idToken", async (req, res) => {
+router.delete("/:userId", async (req, res) => {
   try{
-  const decodedToken = await admin.auth().verifyIdToken(req.params.idToken);
+  const decodedToken = await admin.auth().verifyIdToken(req.headers.authorization.split(" ")[1]);
   const uid = decodedToken.uid;
   if(uid === req.params.userId){
     try {
@@ -70,9 +70,8 @@ router.delete("/:userId/:idToken", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const decodedToken = await admin.auth().verifyIdToken(req.body.idToken);
+    const decodedToken = await admin.auth().verifyIdToken(req.headers.authorization.split(" ")[1]);
     const uid = decodedToken.uid;
-    
     if (req.body.userId === uid) {
       const product = await Products.findById(req.body.productId);
 

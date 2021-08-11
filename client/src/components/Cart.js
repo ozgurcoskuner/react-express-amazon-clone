@@ -50,10 +50,14 @@ function Cart() {
   const removeOrder = (event) => {
     if (currentUser) {
       currentUser.getIdToken(false).then((idToken) => {
+        let bearer = 'bearer ' + idToken;
         fetch(
-          `/api/orders/${event.target.id}/${currentUser.uid}/${idToken}`,
+          `/api/orders/${event.target.id}/${currentUser.uid}`,
           {
             method: "delete",
+            headers: {
+              'Authorization': bearer,
+            },
           }
         )
         .then(() => updateCartAfterFetch())
@@ -68,10 +72,14 @@ function Cart() {
     //this function runs after user clicks pay button. It is just a replica of succesfull payment.
     if (currentUser) {
       currentUser.getIdToken(false).then((idToken) => {
+        let bearer = 'bearer ' + idToken;
         fetch(
-          `/api/orders/${currentUser.uid}/${idToken}`,
+          `/api/orders/${currentUser.uid}`,
           {
             method: "delete",
+            headers: {
+              'Authorization': bearer,
+            },
           }
         )
         .then(() => updateCartAfterFetch())
