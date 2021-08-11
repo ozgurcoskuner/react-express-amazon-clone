@@ -37,7 +37,6 @@ function App() {
                   <Header />
                   <img className="bg-image" src={background} alt="bg-img" />
                   <ProductOwnPage />
-                  <Footer />
                 </Route>
 
                 <Route exact path="/signin">
@@ -53,7 +52,6 @@ function App() {
                   <Elements stripe={stripePromise}>
                   <Cart />
                   </Elements>
-                  <Footer />
                 </Route>
 
                 <Route exact path="/successful-payment">
